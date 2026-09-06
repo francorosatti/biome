@@ -1,0 +1,37 @@
+.dashboard {
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 12px;
+  min-width: 160px;
+  font-variant-numeric: tabular-nums;
+}
+
+.dashboard-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #aaa;
+  letter-spacing: 0.05em;
+}
+
+.dashboard-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.dashboard-divider {
+  border-top: 1px solid #333;
+  margin: 6px 0;
+}
+
+.label.rabbit {
+  color: #d9c07a;
+}
+
+.label.wolf {
+  color: #c76a5c;
+}
+
+.label.grass {
+  color: #6ec86e;
+}

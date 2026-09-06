@@ -1,0 +1,8 @@
+.world-canvas {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+  cursor: crosshair;
+}

@@ -1,0 +1,12 @@
+.parameter-panel {
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 12px;
+  width: 240px;
+}
+
+.parameter-panel-title {
+  font-weight: bold;
+  color: #aaa;
+  margin-bottom: 10px;
+}

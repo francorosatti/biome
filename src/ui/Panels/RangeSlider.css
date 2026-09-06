@@ -1,0 +1,27 @@
+.range-slider {
+  margin-bottom: 10px;
+}
+
+.range-slider-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-bottom: 2px;
+}
+
+.range-slider-value {
+  color: #888;
+  font-variant-numeric: tabular-nums;
+}
+
+.range-slider-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.range-slider input[type='range'] {
+  width: 100%;
+  accent-color: #4caf50;
+}

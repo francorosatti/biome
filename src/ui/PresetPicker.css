@@ -1,0 +1,25 @@
+.preset-picker {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.preset-picker button {
+  background: #2a2a2a;
+  color: #ccc;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.preset-picker button:hover {
+  background: #3a3a3a;
+}
+
+.preset-picker button.active {
+  background: #4caf50;
+  color: #111;
+  border-color: #4caf50;
+}

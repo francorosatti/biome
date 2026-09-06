@@ -1,0 +1,36 @@
+.inspector-panel {
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 12px;
+  min-width: 180px;
+  font-size: 0.85rem;
+}
+
+.inspector-panel.empty {
+  color: #666;
+  font-style: italic;
+}
+
+.inspector-title {
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  color: #eee;
+}
+
+.inspector-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+  color: #ccc;
+}
+
+.inspector-divider {
+  border-top: 1px solid #333;
+  margin: 6px 0;
+}
+
+.inspector-status {
+  color: #9fd89f;
+  text-transform: capitalize;
+}

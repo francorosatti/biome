@@ -1,0 +1,34 @@
+.population-chart {
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.population-chart canvas {
+  display: block;
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.swatch.rabbit {
+  background: #d9c07a;
+}
+
+.swatch.wolf {
+  background: #c76a5c;
+  margin-left: 10px;
+}

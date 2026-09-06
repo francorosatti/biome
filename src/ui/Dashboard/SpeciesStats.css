@@ -1,0 +1,29 @@
+.species-stats {
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.species-stats-title {
+  font-weight: bold;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.species-stats table {
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  width: 100%;
+}
+
+.species-stats td,
+.species-stats th {
+  padding: 3px 8px 3px 0;
+  text-align: left;
+  color: #ccc;
+}
+
+.species-stats th {
+  color: #888;
+  font-weight: normal;
+}
