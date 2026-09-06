@@ -11,6 +11,7 @@ export function EnvironmentParamsPanel() {
       <div className="parameter-panel-title">Environment</div>
       <SingleSlider
         label="World width"
+        description="Width of the simulated world. Takes effect on the next Restart, not immediately."
         value={env.worldWidth}
         min={400}
         max={1600}
@@ -20,6 +21,7 @@ export function EnvironmentParamsPanel() {
       />
       <SingleSlider
         label="World height"
+        description="Height of the simulated world. Takes effect on the next Restart, not immediately."
         value={env.worldHeight}
         min={300}
         max={1200}
@@ -29,6 +31,7 @@ export function EnvironmentParamsPanel() {
       />
       <SingleSlider
         label="Initial grass coverage"
+        description="Fraction of the world covered in grass at the start. Takes effect on the next Restart, not immediately."
         value={env.initialGrassCoverage}
         min={0}
         max={1}
@@ -38,6 +41,7 @@ export function EnvironmentParamsPanel() {
       />
       <SingleSlider
         label="Grass regeneration"
+        description="How fast eaten grass grows back, applied continuously while running. Higher supports more rabbits; lower can cause food scarcity even if wolves aren't the problem."
         value={env.grassRegenRate}
         min={0}
         max={1.5}
@@ -46,6 +50,7 @@ export function EnvironmentParamsPanel() {
       />
       <SingleSlider
         label="Day length (ticks)"
+        description="How many simulation ticks make up one day. Reproduction, the population chart, and events are all evaluated once per day, so this controls how often those checks happen."
         value={env.dayLength}
         min={5}
         max={120}

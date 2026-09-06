@@ -2,6 +2,8 @@
   background: #1a1a1a;
   border-radius: 4px;
   padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .species-stats-title {

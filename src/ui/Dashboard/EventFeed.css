@@ -2,7 +2,8 @@
   background: #1a1a1a;
   border-radius: 4px;
   padding: 12px;
-  width: 260px;
+  width: 100%;
+  box-sizing: border-box;
   max-height: 200px;
   overflow-y: auto;
 }

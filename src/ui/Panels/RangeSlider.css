@@ -5,14 +5,23 @@
 .range-slider-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.8rem;
   color: #bbb;
   margin-bottom: 2px;
+  gap: 8px;
+}
+
+.range-slider-label {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .range-slider-value {
   color: #888;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .range-slider-inputs {

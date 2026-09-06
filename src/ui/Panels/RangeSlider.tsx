@@ -1,7 +1,9 @@
+import { InfoTooltip } from '../InfoTooltip';
 import './RangeSlider.css';
 
 interface RangeSliderProps {
   label: string;
+  description: string;
   value: [number, number];
   min: number;
   max: number;
@@ -9,11 +11,14 @@ interface RangeSliderProps {
   onChange: (value: [number, number]) => void;
 }
 
-export function RangeSlider({ label, value, min, max, step, onChange }: RangeSliderProps) {
+export function RangeSlider({ label, description, value, min, max, step, onChange }: RangeSliderProps) {
   return (
     <div className="range-slider">
       <div className="range-slider-header">
-        <span>{label}</span>
+        <span className="range-slider-label">
+          {label}
+          <InfoTooltip text={description} />
+        </span>
         <span className="range-slider-value">
           {value[0].toFixed(2)} – {value[1].toFixed(2)}
         </span>
@@ -48,6 +53,7 @@ export function RangeSlider({ label, value, min, max, step, onChange }: RangeSli
 
 interface SingleSliderProps {
   label: string;
+  description: string;
   value: number;
   min: number;
   max: number;
@@ -56,11 +62,23 @@ interface SingleSliderProps {
   format?: (v: number) => string;
 }
 
-export function SingleSlider({ label, value, min, max, step, onChange, format }: SingleSliderProps) {
+export function SingleSlider({
+  label,
+  description,
+  value,
+  min,
+  max,
+  step,
+  onChange,
+  format,
+}: SingleSliderProps) {
   return (
     <div className="range-slider">
       <div className="range-slider-header">
-        <span>{label}</span>
+        <span className="range-slider-label">
+          {label}
+          <InfoTooltip text={description} />
+        </span>
         <span className="range-slider-value">{format ? format(value) : value.toFixed(2)}</span>
       </div>
       <input

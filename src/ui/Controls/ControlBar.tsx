@@ -35,10 +35,16 @@ export function ControlBar() {
 
   return (
     <div className="control-bar">
-      <button onClick={handlePlayPause}>{status === 'running' ? '⏸ Pause' : '▶ Play'}</button>
-      <button onClick={handleStep}>⏭ Step</button>
-      <button onClick={handleRestart}>↻ Restart</button>
-      <div className="speed-group">
+      <button onClick={handlePlayPause} title={status === 'running' ? 'Pause the simulation' : 'Run the simulation continuously'}>
+        {status === 'running' ? '⏸ Pause' : '▶ Play'}
+      </button>
+      <button onClick={handleStep} title="Advance exactly one tick, then pause. Useful for inspecting behavior moment-by-moment.">
+        ⏭ Step
+      </button>
+      <button onClick={handleRestart} title="Reset the world to the current parameters' initial conditions (day 0, fresh population).">
+        ↻ Restart
+      </button>
+      <div className="speed-group" title="How many simulation ticks run per rendered frame. Higher speeds let you fast-forward through many days.">
         {SPEED_LABELS.map(({ key, label }) => (
           <button
             key={key}

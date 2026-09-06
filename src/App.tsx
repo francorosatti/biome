@@ -23,21 +23,19 @@ function App() {
       <ControlBar />
 
       <div className="app-body">
-        <div className="app-main">
+        <div className="app-column app-column-world">
           <WorldCanvas />
-          <div className="app-side-stack">
-            <Dashboard />
-            <InspectorPanel />
-          </div>
         </div>
 
-        <div className="app-secondary">
+        <div className="app-column app-column-info">
+          <Dashboard />
+          <InspectorPanel />
           <PopulationChart />
           <EventFeed />
           <SpeciesStats />
         </div>
 
-        <div className="app-config">
+        <div className="app-column app-column-config">
           <RabbitParamsPanel />
           <WolfParamsPanel />
           <EnvironmentParamsPanel />
