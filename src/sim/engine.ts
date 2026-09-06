@@ -37,6 +37,7 @@ export class SimulationEngine {
 
   setSelectedAnimalId(id: number | null) {
     this.selectedAnimalId = id;
+    this.pushSnapshot();
   }
 
   getStatus() {
@@ -47,6 +48,7 @@ export class SimulationEngine {
     if (this.status === 'running') return;
     this.status = 'running';
     this.rafId = requestAnimationFrame(this.loop);
+    this.pushSnapshot();
   }
 
   pause() {
@@ -55,6 +57,7 @@ export class SimulationEngine {
       cancelAnimationFrame(this.rafId);
       this.rafId = null;
     }
+    this.pushSnapshot();
   }
 
   step() {

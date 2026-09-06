@@ -24,7 +24,9 @@ export class PopulationHistory {
 
   record(day: number, rabbits: number, wolves: number, grassAvg: number) {
     if (day % this.sampleEveryNDays !== 0) return;
-    this.points.push({ day, rabbits, wolves, grassAvg });
+    // Reassign (not push-in-place) so consumers holding the old array
+    // reference — e.g. a Zustand store comparing by identity — see the change.
+    this.points = [...this.points, { day, rabbits, wolves, grassAvg }];
     if (this.points.length > MAX_POINTS) {
       this.points = this.points.filter((_, i) => i % 2 === 0);
       this.sampleEveryNDays *= 2;

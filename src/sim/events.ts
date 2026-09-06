@@ -27,8 +27,10 @@ export class EventLog {
   }
 
   private push(day: number, text: string) {
-    this.events.push({ id: nextEventId++, day, text });
-    if (this.events.length > MAX_EVENTS) this.events.shift();
+    // Reassign (not push-in-place) so consumers holding the old array
+    // reference — e.g. a Zustand store comparing by identity — see the change.
+    const next = [...this.events, { id: nextEventId++, day, text }];
+    this.events = next.length > MAX_EVENTS ? next.slice(next.length - MAX_EVENTS) : next;
   }
 
   detect(prev: Aggregate | null, curr: Aggregate) {
